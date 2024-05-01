@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soda Machine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .vending-machine {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .display-area {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border: 2px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .display-label {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        button {
+            padding: 12px;
+            width: calc(50% - 5px);
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="vending-machine">
+        <h2>Soda Machine</h2>
+        <div class="display-area">
+            <p><span class="display-label">State:</span> <span id="state"></span></p>
+            <div id="sodaCount">
+                <p><span class="display-label">Soda Count:</span></p>
+                <p><span class="display-label">Coke:</span> <span id="cokeCount"></span></p>
+                <p><span class="display-label">Pepsi:</span> <span id="pepsiCount"></span></p>
+            </div>
+            <p><span class="display-label">Message:</span> <span id="message"></span></p>
+        </div>
+        <div class="buttons-container">
+            <button id="insertQuarterButton">Insert Quarter</button>
+            <button id="removeQuarterButton">Remove Quarter</button>
+            <button id="buyCokeButton">Buy Coke</button>
+            <button id="buyPepsiButton">Buy Pepsi</button>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
